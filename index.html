@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <style type="text/css">
+    body{text-align: center; 
+        background: rgb(12, 111, 208);
+        color: white;
+        font-family: "Arial";}
+
+
+    .boton{background: rgb(12, 208, 171);
+    border-radius: 50px;
+    line-height: 50px;
+    width: 200px;
+    border: none;
+    float: none;
+    display: block;
+    margin: 20px auto;
+    color: white;
+    cursor: pointer;}
+
+    p{margin: 0 0 60px 0;}
+
+    </style>
+
+    <title>NOTIFICACION</title>
+
+
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+
+        
+        var btn1 = $("#btn1");
+     
+
+
+        // BOTONES
+
+
+        
+        //--------------------------------- BOTON 1 ------------------------------------//
+
+
+    //    btn1.click(function() {
+        
+         navigator.notification.alert(
+            'Estas viendo una notificación!',  // message
+            notificacionCerrada,         // callback
+            'Felicitaciones',            // title
+            'OK'                  // buttonName
+        );
+        
+
+       // });
+
+
+        function notificacionCerrada(buttonIndex) {
+          
+        }
+
+
+       
+    };
+
+
+   
+   
+
+    </script>
+  </head>
+  <body onload="onDeviceReady()">
+    <h1>Notificacion</h1>
+    <p>Ejemplo de notificaciones</p>
+
+
+
+  </body>
+</html>
